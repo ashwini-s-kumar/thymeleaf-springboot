@@ -14,30 +14,30 @@
 
 <body>
     <div class="container">
-        <h3> Employee Directory</h3>
+        <h3> Course Directory</h3>
         <hr>
 
-        <p class="h4 mb-4">Save Employee</p>
+        <p class="h4 mb-4">Save Course</p>
 
-            <form action="#" th:action="@{/employees/save}"
-            th:object="${employee}" method="POST">
+            <form action="#" th:action="@{/api/save}"
+            th:object="${course}" method="POST">
 
                 <!-- add hidden form field to handle the update -->
                 <input type="hidden" th:field="*{id}">
 
-                <input type="text" th:field="*{firstName}"
-                       class="form-control mb-4 w-25" placeholder="First Name">
+                <input type="text" th:field="*{name}"
+                       class="form-control mb-4 w-25" placeholder="Name">
 
-                <input type="text" th:field="*{lastName}"
-                       class="form-control mb-4 w-25" placeholder="Last Name">
+                <input type="text" th:field="*{author}"
+                       class="form-control mb-4 w-25" placeholder="Author">
 
-                <input type="text" th:field="*{email}"
-                       class="form-control mb-4 w-25" placeholder="Email">
+                <input type="text" th:field="*{language}"
+                       class="form-control mb-4 w-25" placeholder="Language">
 
                 <button type="submit" class="btn btn-info col-2">Save</button>
             </form>
         <hr>
-        <a th:href="@{/employees/list}">Back to Employees List</a>
+        <a th:href="@{/api/courses}">Back to course List</a>
     </div>
 </body>
 
